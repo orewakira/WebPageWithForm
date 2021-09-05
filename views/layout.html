@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+  <!-- A HEAD é reponsável por receber configurações da página -->
+  {% block title %}
+    <title>Casa Criativa</title>
+  {% endblock title%}
+
+
+  {% include "head.html"%}
+</head>
+
+<body id="{{bodyId}}">
+
+  <div id="container">
+      {% block content %}
+      {% endblock %}
+  </div>
+
+  {% include "modal.html" %}
+
+  <script src="scripts.js" charset="utf-8"></script>
+
+</body>
+</html>
